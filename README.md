@@ -6,6 +6,8 @@ This project contains the minimum needed for starting a project with Nest.js (fa
   <img src="https://user-images.githubusercontent.com/6802086/128186558-8a5f29ed-ea76-46cb-8e80-c8ace8978ba9.png" width="100" />
   <img src="https://user-images.githubusercontent.com/6802086/128186611-2478c678-13bd-4360-92ec-f45eb2463546.png" width="100" />
   <img src="https://user-images.githubusercontent.com/6802086/128187058-2b35c79f-f01e-4914-a10b-cb83b61da4fc.png" width="150" />
+  <img src="https://user-images.githubusercontent.com/6802086/128189425-a5c0cb58-b727-4fcc-97ce-e8feff362740.png" width="100" />
+
 </p>
 
 ## Installation/Launch
