@@ -80,7 +80,7 @@ For the frontend you can access through
 To stop the servers, you only have to use `docker-compose down`
 
 ## Configuration 
-You can configure the port and some details in the .env file in root directory for both back and front end
+Configuration can be found in the .env file in root directory for both back and front end
 
 ## Used sources 
 * https://blog.logrocket.com/containerized-development-nestjs-docker/
