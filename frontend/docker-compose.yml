@@ -1,0 +1,25 @@
+services:
+    dev:
+        container_name: frontend-dev
+        image: frontend-dev:1.0.0
+        build:
+            context: .
+            dockerfile: dockerfile.dev
+        env_file: .env
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - ${FE_PORT}:3000
+        stdin_open: true
+        environment: 
+            CHOKIDAR_USEPOLLING: 'true'
+    prod:
+        container_name: frontend-prod
+        image: frontend-prod:1.0.0
+        build:
+            context: .
+            dockerfile: dockerfile.prod
+        env_file: .env
+        ports:
+            - ${FE_PORT}:80

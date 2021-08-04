@@ -1,0 +1,63 @@
+services:
+    mongo:
+        container_name: database
+        image: mongo:latest
+        volumes:
+            - mongo-data:/data/db
+        restart: always
+        expose:
+            - 27017
+        networks:
+            - back
+        volumes: 
+            - mongo-db:/data/db
+    dev:
+        container_name: backend-dev
+        image: backend-dev:1.0.0
+        build:
+            context: .
+            target: development
+            dockerfile: ./dockerfile
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+        links: 
+            - mongo
+        ports: 
+            - ${BE_PORT}:${BE_PORT}
+        expose: 
+            - 9229
+        command: npm run start:dev
+        env_file: .env
+        networks:
+            - back
+        depends_on:
+            - mongo
+        environment:
+            - DB_URL=mongodb://mongo/backdev
+    prod:
+        container_name: backend-prod
+        image: backend-prod:1.0.0
+        build:
+            context: .
+            target: production
+            dockerfile: ./dockerfile
+        links: 
+            - mongo
+        ports: 
+            - ${BE_PORT}:${BE_PORT}
+        expose: 
+            - 9229
+        command: npm run start:prod
+        env_file: .env
+        networks:
+            - back
+        depends_on:
+            - mongo
+        environment:
+            - DB_URL=mongodb://mongo/backprod
+networks:
+    back:
+volumes: 
+    mongo-db:
+        
