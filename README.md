@@ -85,5 +85,5 @@ You can configure the port and some details in the .env file in root directory f
 * https://medium.com/geekculture/dockerizing-a-react-application-with-multi-stage-docker-build-4a5c6ca68166
 * https://mherman.org/blog/dockerizing-a-react-app/
 
-### Tutoriel for nestjs mongodb and graphql
+### Tutorial for nestjs mongodb and graphql
 * https://www.webtips.dev/nestjs-and-mongodb
