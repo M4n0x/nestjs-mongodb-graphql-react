@@ -1,4 +1,4 @@
-# Get started
+# NMGR - Full stack starter pack
 This project contains the minimum needed for starting a project with Nest.js (fastify, Typescript), MongoDB, GraphQL and React.js (Typescript) as frontend. All part of this project is dockerized.
 
 <p float="left">
